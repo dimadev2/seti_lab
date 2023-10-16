@@ -59,7 +59,7 @@ def tf_print():
                 print("Clients: ")
                 for cl_addr, client in client_map.items():
                     progress = int(client['recv_size'] / client['filesize'] * PROGRESS_BAR_SIZE)
-                    msg = f" - {cl_addr[0]}:\n"
+                    msg = f" - {cl_addr[0]}, {cl_addr[1]}:\n"
                     msg += f"\tFilename: {client['filename']}\n"
                     msg += f"\tFilesize: {client['filesize']:.2f}\n"
                     msg += f"\tRecieved: {client['recv_size']:.2f}\n"
